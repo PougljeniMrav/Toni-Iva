@@ -2,7 +2,7 @@
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Toni & Iva — Popis Gostiju</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,31 +10,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page">
-        <div class="frame-wrapper">
-            <img src="assets/Gold_Frame_Transparent.png" alt="" class="frame" aria-hidden="true">
-            <div class="content">
-                <p class="welcome">Dobrodošli na vjenčanje</p>
-                <h1 class="names">Toni &amp; Iva</h1>
-                <p class="subtitle">Unesite svoje ime i pogledajte gdje sjedite</p>
+    <main class="page">
+        <section class="frame-section">
+            <div class="frame-wrapper">
+                <img src="assets/Gold_Frame_Transparent.png" alt="" class="frame" aria-hidden="true">
+                <div class="content">
+                    <p class="welcome">Dobrodošli na vjenčanje</p>
+                    <h1 class="names">Toni &amp; Iva</h1>
+                    <p class="subtitle">Unesi svoje ime i pogledaj gdje sjediš</p>
 
-                <form id="search-form" autocomplete="off">
-                    <div class="input-wrapper">
-                        <input
-                            type="text"
-                            id="name-input"
-                            placeholder="Vaše ime i prezime"
-                            autocomplete="off"
-                            spellcheck="false">
-                        <ul id="suggestions" class="suggestions" hidden></ul>
-                    </div>
-                    <button type="submit" id="find-button">Pronađi moje mjesto</button>
-                </form>
+                    <form id="search-form" autocomplete="off">
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                id="name-input"
+                                placeholder="Tvoje ime i prezime"
+                                autocomplete="off"
+                                spellcheck="false">
+                            <ul id="suggestions" class="suggestions" hidden></ul>
+                        </div>
+                        <button type="submit" id="find-button">Pronađi moje mjesto</button>
+                    </form>
 
-                <div id="result" class="result" hidden></div>
+                    <div id="result" class="result" hidden></div>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <section class="schema-section">
+            <h2 class="schema-title">Raspored stolova</h2>
+            <img src="assets/shema_stolova.jpeg" alt="Shema rasporeda stolova" class="schema-image">
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

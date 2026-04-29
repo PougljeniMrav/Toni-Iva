@@ -85,6 +85,12 @@ function renderSuggestions(matches) {
     suggestionsEl.hidden = false;
 }
 
+function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+}
+
 function showResult(guest) {
     if (!guest) {
         resultEl.className = 'result not-found';
@@ -92,8 +98,19 @@ function showResult(guest) {
         resultEl.hidden = false;
         return;
     }
+    const others = guests
+        .filter(g => g.table === guest.table && g.name !== guest.name)
+        .map(g => `<li>${escapeHtml(g.name)}</li>`)
+        .join('');
     resultEl.className = 'result found';
-    resultEl.innerHTML = `Sjedite za stolom <strong>${guest.table}</strong>`;
+    resultEl.innerHTML = `
+        Sjediš za stolom
+        <span class="table-name">${escapeHtml(guest.table)}</span>
+        ${others ? `
+            <span class="tablemates-title">Ostali za stolom</span>
+            <ul class="tablemates">${others}</ul>
+        ` : ''}
+    `;
     resultEl.hidden = false;
 }
 
