@@ -215,23 +215,17 @@ html, body {
 
 .schema-image-wrap {
     width: 100%;
-    max-width: 360px;
+    max-width: 460px;
     margin: 0 auto;
-    aspect-ratio: 1064 / 1478;
-    position: relative;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 14px rgba(58, 46, 31, 0.12);
 }
 
 .schema-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(100% * 1478 / 1064);
+    display: block;
+    width: 100%;
     height: auto;
-    transform: translate(-50%, -50%) rotate(90deg);
-    transform-origin: center center;
 }
 
 @media (max-width: 480px) {
