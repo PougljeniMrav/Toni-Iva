@@ -11,38 +11,35 @@
 </head>
 <body>
     <main class="page">
-        <section class="frame-section">
-            <div class="frame-wrapper">
-                <img src="assets/Gold_Frame_Transparent.png" alt="" class="frame" aria-hidden="true">
-                <div class="content">
-                    <p class="welcome">Dobrodošli na vjenčanje</p>
-                    <h1 class="names">Toni &amp; Iva</h1>
-                    <p class="subtitle">Unesi svoje ime i pogledaj gdje sjediš</p>
+        <article class="invitation">
+            <header class="invitation-header">
+                <p class="welcome">Dobrodošli na vjenčanje</p>
+                <h1 class="names">Toni &amp; Iva</h1>
+                <p class="subtitle">Unesi svoje ime i pogledaj gdje sjediš</p>
+            </header>
 
-                    <form id="search-form" autocomplete="off">
-                        <div class="input-wrapper">
-                            <input
-                                type="text"
-                                id="name-input"
-                                placeholder="Tvoje ime i prezime"
-                                autocomplete="off"
-                                spellcheck="false">
-                            <ul id="suggestions" class="suggestions" hidden></ul>
-                        </div>
-                        <button type="submit" id="find-button">Pronađi moje mjesto</button>
-                    </form>
-
-                    <div id="result" class="result" hidden></div>
+            <form id="search-form" autocomplete="off">
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="name-input"
+                        placeholder="Tvoje ime i prezime"
+                        autocomplete="off"
+                        spellcheck="false">
+                    <ul id="suggestions" class="suggestions" hidden></ul>
                 </div>
-            </div>
-        </section>
+                <button type="submit" id="find-button">Pronađi moje mjesto</button>
+            </form>
 
-        <section class="schema-section">
-            <h2 class="schema-title">Raspored stolova</h2>
-            <div class="schema-image-wrap">
-                <img src="assets/shema_stolova.jpeg" alt="Shema rasporeda stolova" class="schema-image">
-            </div>
-        </section>
+            <div id="result" class="result" hidden></div>
+
+            <section class="schema-section">
+                <h2 class="schema-title">Raspored stolova</h2>
+                <div class="schema-image-wrap">
+                    <img src="assets/shema_stolova.jpeg" alt="Shema rasporeda stolova" class="schema-image">
+                </div>
+            </section>
+        </article>
     </main>
 
     <script src="script.js"></script>
